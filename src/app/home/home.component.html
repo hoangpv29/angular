@@ -1,0 +1,19 @@
+<section id="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let product of products">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <img src="{{ product.imgUrl }}" alt="" class="card-img-top" />
+            <h5 class="card-title">  <a [routerLink]="['/product', product.id]">
+              {{ product.name }}
+            </a></h5>
+            <p class="card-text">Giá: {{ product.price }}</p>
+            <!-- pipes -->
+            <a routerLink="product/{{product.id}}" class="btn btn-primary">Chi tiết:{{product.id}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

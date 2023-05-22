@@ -18,9 +18,11 @@ export class Product_detailComponent implements OnInit {
   ngOnInit(): void {
     this.elementId = this.route.snapshot.params['id']; // Thay đổi ID tùy theo phần tử cần lấy
     console.log(this.elementId);
-    this.apiService.getbyId(this.elementId).subscribe((data) => {
-      console.log(data);
-      this.elementId = data;
+    this.apiService.getProduct(this.elementId).subscribe((data) => {
+      console.log(data.datas[0]);
+      
+      this.elementId = data.datas[0];
     });
   }
 }
+

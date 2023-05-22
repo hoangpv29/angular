@@ -1,23 +1,21 @@
 
 <div class="container">
   <div class="row">
-    <!--Ảnh sản phẩm-->
+    
     <div class="col-sm-6">
-      <img style="width: 100%;" src="https://hc.com.vn/i/ecommerce/media/GS.008504_FEATURE_93851.jpg" class="img-responsive" alt="Sản phẩm">
+      <img style="width: 100%;height: 300px;;object-fit: contain;" [src]="elementId.image" class="img-responsive " alt="Sản phẩm">
     </div>
-    <!--Thông tin sản phẩm-->
-    <div class="col-sm-6">
-      <h1>{{elementId.name}}</h1>
-      <p>Mã sản phẩm: SP001</p>
-      <p>Giá: 1,000,000 VND</p>
-      <p>Mô tả: Đây là mô tả về sản phẩm</p>
+     <div class="col-sm-6">
+      <p>Mã sản phẩm: {{elementId.name}}</p>
+      <p>Giá: {{elementId.price}} VND</p>
+      <p>Mô tả: {{elementId.desc}}</p>
       <br>
-      <!--Nút Mua hàng-->
+    
       <button type="button" class="btn btn-primary">Mua hàng</button>
     </div>
   </div>
   <br>
-  <!--Thông tin chi tiết sản phẩm-->
+ 
   <div class="row">
     <div class="col-sm-12">
       <h2>Thông tin chi tiết sản phẩm</h2>
@@ -25,3 +23,7 @@
     </div>
   </div>
 </div>
+
+
+
+

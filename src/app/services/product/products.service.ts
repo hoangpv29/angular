@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import {HttpErrorResponse } from '@angular/common/http';
 import { catchError, map, Observable, throwError } from 'rxjs';
 import { Product } from 'src/app/common/product';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -56,5 +57,14 @@ export class ProductsService {
   deleteProduct(id: string): Observable<any> {
     const url = `${this.apiUrl}/${id}`;
     return this.http.delete<any>(url);
+  }
+  searchProductsByName(name: string): Observable<Product[]> {
+    const searchUrl = `${this.apiUrl}/search/findByNameContaining?name=${name}`;
+    return this.http.get<Product[]>(searchUrl).pipe(
+      catchError((error) => {
+        console.log(error); // In ra lỗi nếu có
+        return throwError('Đã có lỗi xảy ra khi tìm kiếm sản phẩm.'); // Thông báo lỗi cho người dùng
+      })
+    );
   }
 }

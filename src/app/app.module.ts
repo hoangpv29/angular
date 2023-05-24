@@ -21,7 +21,9 @@ import { SignupComponent } from './pages/logup/logup.component';
     HeaderComponent,
     LoginComponent,
     SignupComponent,
-    Not_foundComponent
+    Not_foundComponent,
+    LoginComponent
+    
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule,ReactiveFormsModule,CommonModule],
   providers: [],

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" routerLink="/"
       ><img height="50" src="../../assets/img/Kids Shop.png" alt=""
@@ -56,4 +56,64 @@
       </form>
     </div>
   </div>
-</nav>
+</nav> -->
+<div class="container">
+  <div class="top-line" style="padding: 15px 0 4px"></div>
+  <div class="mid-line" style="padding: 10px 0 20px">
+    <div class="row d-flex align-items-center">
+      <div class="col-3">
+        <img
+          src="https://livedemo00-opencart.template-help.com/opencart_prod-23516/image/catalog/logo.png"
+          alt=""
+        />
+      </div>
+      <div class="col-6">
+        <!-- <div class="input-group mb-3"> -->
+          <form action="" class="input-group mb-3" (ngSubmit)="onSearch(myIp.value)" >
+            <input
+          #myIp
+          (keyup.enter)="onSearch(myIp.value)"
+            type="text"
+            class="form-control"
+            placeholder="Recipient's username"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+          />
+          <button
+            class="btn btn-info text-light"
+            type="button"
+            id="button-addon2"
+            type="submit"
+          >
+            Search
+          </button>
+          </form>
+        </div>
+      <!-- </div> -->
+      <div class="col-3 d-flex">
+        <!-- <fa-icon [icon]="faPhone" style="color: #34b1da" class="mt-1"></fa-icon>n -->
+        <p class="phone ms-2">800-2345-6789</p>
+      </div>
+    </div>
+  </div>
+  <div class="bot-line">
+    <div class="container">
+      <div class="row">
+        <div class="col-4" style="padding-left: 0">
+          <div class="html-block">
+            <span class="cat-title" style="height: 60px">Categories</span>
+          </div>
+        </div>
+        <div class="col-8 d-flex" style="background-color: #464646">
+          <ul class="list-header mt-2">
+            <li><a routerLink="">Home</a></li>
+            <li><a routerLink="logup">Register</a></li>
+            <li><a routerLink="login">Login</a></li>
+            <li><a routerLink="category">Category</a></li>
+            <li><a href="">Checkout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

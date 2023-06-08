@@ -1,0 +1,29 @@
+.footer {
+    height: 150px;
+    width: 100%;
+    padding-top: 30px;
+  }
+  
+  .list-footer {
+    padding-left: 0;
+  }
+  
+  .list-footer li {
+    list-style: none;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 27px;
+    text-transform: none;
+    color: #34b1da;
+  }
+  
+  .list-footer__li {
+    color: #fff !important;
+  }
+  
+  .copyright {
+    border-top: 1px solid #888;
+    font-size: 12px;
+    color: #fff;
+    padding-top: 10px;
+  }

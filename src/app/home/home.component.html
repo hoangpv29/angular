@@ -17,7 +17,7 @@
     </div>
   </div>
 </section> -->
-<section id="home-section">
+<!-- <section id="home-section">
   <div class="container">
     <div class="row">
       <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let product of products">
@@ -28,11 +28,117 @@
               {{ product.name }}
             </a></h5>
             <p class="card-text">Giá: {{ product.price }}</p>
-            <!-- pipes -->
+           
             <a routerLink="product/{{product.id}}" class="btn btn-primary">Chi tiết</a>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://livedemo00-opencart.template-help.com/opencart_prod-23516/image/cache/catalog/slide-1-870x345.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://livedemo00-opencart.template-help.com/opencart_prod-23516/image/cache/catalog/slide-2-870x345.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://livedemo00-opencart.template-help.com/opencart_prod-23516/image/cache/catalog/slide-3-870x345.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <div class="banner-home h-100">
+        <img
+          src="https://livedemo00-opencart.template-help.com/opencart_prod-23516/image/cache/catalog/banner-1-570x350.jpg"
+          alt=""
+          class="banner-img"
+        />
+        <div class="s-desc">
+          <h6 class="fw-bold">new</h6>
+          <h5 class="fw-normal">arial</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="banner-home">
+        <img
+          src="https://livedemo00-opencart.template-help.com/opencart_prod-23516/image/cache/catalog/banner-2-570x350.jpg"
+          alt=""
+          class="banner-img"
+        />
+        <div class="s-desc">
+          <h6 class="fw-normal text-white">FREE SHIPPING & REFUND</h6>
+          <h5 class="fw-bold text-white">GUARANTEE!</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="banner-home">
+        <img
+          src="https://livedemo00-opencart.template-help.com/opencart_prod-23516/image/cache/catalog/banner-3-570x350.jpg"
+          class="banner-img"
+        />
+        <div class="s-desc">
+          <h6 class="fw-bold text-info">20% OFF</h6>
+          <h5 class="fw-normal">Smart</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12"><h6 class="latest">latest</h6></div>
+    <div class="col-3 mt-3" *ngFor="let product of products">
+      <div class="card h-100">
+        <div class="card-body">
+          <img src="{{ product.image }}" alt="" class="card-img-top" />
+          <h5 class="card-title">
+            <a
+              [routerLink]="['/product', product.id]"
+              style="text-decoration: none; color: #2f2f2f"
+            >
+              {{ product.name }}
+            </a>
+          </h5>
+          <p class="card-text">Giá: {{ product.price }}</p>
+          <!-- pipes -->
+          <a routerLink="product/{{ product.id }}" class="btn btn-primary"
+            >Chi tiết</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <img
+        src="https://livedemo00-opencart.template-help.com/opencart_prod-23516/image/catalog/demo/Electromo_big.jpg"
+        alt=""
+        class="banner-end"
+      />
+    </div>
+  </div>
+</div>

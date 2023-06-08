@@ -6,6 +6,7 @@ import { Not_foundComponent } from './Not_found/Not_found.component';
 import { CategoryComponent } from './pages/category/category.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/logup/logup.component';
+// import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,6 +14,8 @@ const routes: Routes = [
   { path: 'category', component: CategoryComponent },
   { path: 'login', component: LoginComponent },
   { path: 'logup', component: SignupComponent },
+  // { path: 'admin', component: AdminComponent },
+
   // { path: 'product/:id', component: Product_detailComponent },
   { path: '**', component: Not_foundComponent },
 ];

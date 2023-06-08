@@ -13,8 +13,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common'; 
 import { SignupComponent } from './pages/logup/logup.component';
+// import { AdminComponent } from './admin/admin.component';
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     HomeComponent,
     FooterComponent,
@@ -22,9 +23,9 @@ import { SignupComponent } from './pages/logup/logup.component';
     LoginComponent,
     SignupComponent,
     Not_foundComponent,
-    LoginComponent
-    
-  ],
+    LoginComponent,
+      // AdminComponent
+   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule,ReactiveFormsModule,CommonModule],
   providers: [],
   bootstrap: [AppComponent],

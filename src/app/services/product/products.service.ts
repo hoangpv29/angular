@@ -59,7 +59,7 @@ export class ProductsService {
     return this.http.delete<any>(url);
   }
   searchProductsByName(name: string): Observable<Product[]> {
-    const searchUrl = `${this.apiUrl}/search/findByNameContaining?name=${name}`;
+    const searchUrl = `${this.apiUrl}/search/:${name}`;
     return this.http.get<Product[]>(searchUrl).pipe(
       catchError((error) => {
         console.log(error); // In ra lỗi nếu có

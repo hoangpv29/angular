@@ -25,11 +25,15 @@ export class HeaderComponent {
       // Nếu chưa nhập từ khóa tìm kiếm thì hiển thị toàn bộ sản phẩm
       this.apiService.getProducts()?.subscribe((data) => {
         this.products = data;
+        console.log(11);
+        
       });
     } else {
       // Nếu đã nhập từ khóa tìm kiếm thì lọc danh sách sản phẩm
       this.apiService.searchProductsByName(searchText)?.subscribe((data) => {
         this.products = data;
+        console.log(13);
+        
       });
     }
   }
